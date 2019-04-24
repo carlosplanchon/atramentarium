@@ -25,7 +25,6 @@ class CommandCompleter:
     def complete(self, text: str, state: int) -> Optional[str]:
         """
         Completer function for readline.
-
         :param text: str: Text that the user is writing at a certain moment,
             it is a variable required by readline.set_completer.
         :param state: int: Variable required by readline.set_completer.
@@ -55,7 +54,6 @@ def prompt(
         ) -> None:
     """
     It starts the prompt using command_completer.Completer.
-
     :param command_processing_function: Any: Function to execute
         over the recognized command.
     :param prompt_string: str:
@@ -81,3 +79,16 @@ def prompt(
         command_processing_function(input(prompt_string))
         readline.write_history_file(history_filepath)
     return None
+
+
+def parse_command_list(command_list: List[List[str]]) -> List[str]:
+    """
+    Parse command list.
+    :param command_list: List[List[str]]: List of commands.
+
+    """
+    parsed_command_list = []
+    for cmd_list in command_list:
+        for command in cmd_list:
+            parsed_command_list.append(command)
+    return parsed_command_list
