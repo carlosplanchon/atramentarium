@@ -8,7 +8,7 @@ readme = Path("README.md").read_text()
 setup(
     name="atramentarium",
     packages=["atramentarium"],
-    version="0.2",
+    version="0.3",
     license="GPL3",
     description="Python3 prompt with simple command completion.",
     long_description=readme,
@@ -17,7 +17,7 @@ setup(
     author_email="bubbledoloresuruguay2@gmail.com",
     url="https://github.com/carlosplanchon/atramentarium",
     download_url="https://github.com/carlosplanchon/"
-        "atramentarium/archive/v0.2.tar.gz",
+        "atramentarium/archive/v0.3.tar.gz",
     keywords=["command", "completion", "readline"],
     classifiers=[
         "Intended Audience :: Developers",
