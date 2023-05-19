@@ -6,7 +6,7 @@ atramentarium means "inkpot" in late latin.
 ## Installation
 ### Install with pip
 ```
-pip3 install -U atramentarium
+pip install -U atramentarium
 ```
 
 ## Usage
