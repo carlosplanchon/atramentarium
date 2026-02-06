@@ -1,12 +1,12 @@
 # atramentarium
-*Python3 prompt with simple command completion.*
+*Python CLI minilib to enable simple command completion.*
 
 atramentarium means "inkpot" in late latin.
 
 ## Installation
-### Install with pip
+### Install with uv:
 ```
-pip install -U atramentarium
+uv add -U atramentarium
 ```
 
 ## Usage
