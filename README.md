@@ -1,3 +1,5 @@
+![Banner](https://raw.githubusercontent.com/carlosplanchon/atramentarium/refs/heads/master/assets/banner.jpeg)
+
 # atramentarium
 *Python CLI minilib to enable simple command completion.*
 
