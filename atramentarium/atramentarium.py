@@ -4,14 +4,14 @@ from os.path import exists
 
 import readline
 
-from typing import Any, List, Optional
+from typing import Any
 
 
 class CommandCompleter:
     """ CommandCompleter class for readline. """
-    def __init__(self, command_list: List[str] = []):
+    def __init__(self, command_list: list[str] = []):
         self.__command_list = command_list
-        self.matches: List[str] = []
+        self.matches: list[str] = []
 
     def get_history_items(self):
         """ Return a list of historic values. """
@@ -22,7 +22,7 @@ class CommandCompleter:
                 )
             ]
 
-    def complete(self, text: str, state: int) -> Optional[str]:
+    def complete(self, text: str, state: int) -> str | None:
         """
         Completer function for readline.
         :param text: str: Text that the user is writing at a certain moment,
@@ -48,7 +48,7 @@ class CommandCompleter:
 def prompt(
     command_processing_function: Any,
     prompt_string: str = "> ",
-    command_list: List[str] = [],
+    command_list: list[str] = [],
     history_filepath: str = "/tmp/completer.hist",
     parse_and_bind_init_line: str = "tab: complete"
         ) -> None:
@@ -58,7 +58,7 @@ def prompt(
         over the recognized command.
     :param prompt_string: str:
         String to be used as prompt. (Default value = "> ")
-    :param command_list: List[str]:
+    :param command_list: list[str]:
         List of commands to be added to the completer at first.
         (Default value = [])
     :param history_filepath: str: History file path.
@@ -81,10 +81,10 @@ def prompt(
     return None
 
 
-def parse_command_list(command_list: List[List[str]]) -> List[str]:
+def parse_command_list(command_list: list[list[str]]) -> list[str]:
     """
     Parse command list.
-    :param command_list: List[List[str]]: List of commands.
+    :param command_list: list[list[str]]: List of commands.
 
     """
     parsed_command_list = []
